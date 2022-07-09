@@ -1,16 +1,11 @@
 package Lombok;
 
-import lombok.AllArgsConstructor;
-import lombok.EqualsAndHashCode;
-import lombok.NonNull;
-import lombok.RequiredArgsConstructor;
+import lombok.ToString;
 
-@AllArgsConstructor
-@EqualsAndHashCode
-
-
+@ToString(exclude = "password")
 public class User {
-
-    private int id;
-    private int password;
+    private Long id;
+    private String username;
+    private String password;
+    private int[] scores;
 }

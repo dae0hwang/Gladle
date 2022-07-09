@@ -6,7 +6,7 @@ public class Main {
         UserRead userRead = new UserRead();
         Calc calc = new Calc(userRead);
         System.out.println(calc.runCalc());
-        System.out.println(calc.runCalc());
+
 
 
 

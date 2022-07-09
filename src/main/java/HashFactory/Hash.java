@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import lombok.AllArgsConstructor;
 import lombok.Lombok;
 
-@AllArgsConstructor
+
 
 
 
@@ -20,7 +20,6 @@ public class Hash {
             this.key = key;
             this.value = value;
         }
-//        Lombok AllArgsConstructor
     }
 
     private LinkedList<Node>[] table;
@@ -47,6 +46,7 @@ public class Hash {
         if (table[index] == null) {
             return null;
         }
+
 
         Iterator<Node> iterator = table[index].iterator();
 
@@ -75,6 +75,7 @@ public class Hash {
             }
         }
     }
+
 
     public String get(String key) {
         int hashCode = getHashCode(key);

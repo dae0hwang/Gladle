@@ -1,6 +1,4 @@
 
-L
-src/main/java/Hash/Main.java,0\c\0ce036bae66887ca9c9b18d78ffbb271ba3c2a36
 M
 src/main/java/Lombok/Dog.java,9\0\9027b2c8fc638b836d8096d9114436afbf97817f
 Q
@@ -15,5 +13,7 @@ N
 settings.gradle,0\5\05efc8b1657769a27696d478ded1e95f38737233
 <
 build.gradle,f\0\f07866736216be0ee2aba49e392191aeae700a35
-N
-src/main/java/Lombok/Main.java,d\b\db03a5e3195c25bbf8a10b79ba9d50c635aea43e
+P
+ src/main/java/TestTest/Calc.java,4\8\48de76d4d1e27f94dd4222fec4cfcf82f282fb61
+T
+$src/main/java/TestTest/UserRead.java,3\1\3104232ddc878faacc1ee5e1daec05e54d0ca4a1
