@@ -2,7 +2,6 @@ package HashFactory;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import org.junit.jupiter.api.BeforeEach;
@@ -71,10 +70,10 @@ class HashTest {
         //given
         Hash hash = new Hash(10);
         //when
-        hash.put("aa", "aa");
-        String result = hash.get("aa");
+        hash.put("LockTest", "LockTest");
+        String result = hash.get("LockTest");
         //then
-        assertEquals(result, "aa");
+        assertEquals(result, "LockTest");
 
     }
 
@@ -84,7 +83,7 @@ class HashTest {
         //given
         Hash hash = new Hash(10);
         //when
-        hash.put("aa", "aa");
+        hash.put("LockTest", "LockTest");
         String result = hash.get("bb");
         //then
         assertEquals(result, "null");
@@ -115,9 +114,9 @@ class HashTest {
         Hash hash = new Hash(10);
         //when
         //as와 tt getindex값이 갔다.
-        hash.put("aa", "aa");
-        hash.put("aa", "ss");
-        String result = hash.get("aa");
+        hash.put("LockTest", "LockTest");
+        hash.put("LockTest", "ss");
+        String result = hash.get("LockTest");
         //then
         assertEquals(result, "ss");
 
