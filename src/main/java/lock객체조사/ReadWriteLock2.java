@@ -6,15 +6,15 @@ import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 public class ReadWriteLock2 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         Data data = new Data(10);
-        new ReaderThread(data).start();
-        new ReaderThread(data).start();
-        new ReaderThread(data).start();
         new ReaderThread(data).start();
         new ReaderThread(data).start();
         new WriterThread(data, "ABCDEFGHIJKLMNOPQRSTUVWXYZ").start();
         new WriterThread(data, "abcdefghijklmnopqrstuvwxyz").start();
+        Thread.sleep(6000);
+        System.exit(0);
+
     }
 
 }
