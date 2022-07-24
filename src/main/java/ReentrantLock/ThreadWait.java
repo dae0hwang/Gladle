@@ -1,4 +1,4 @@
-package 재진입락;//package 쓰레드메소드연습;
+package ReentrantLock;//package 쓰레드메소드연습;
 //
 //import java.util.ArrayList;
 //

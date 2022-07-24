@@ -1,4 +1,4 @@
-package lock객체조사;
+package lockObjechInvestigation;
 
 public class ThreadLocalTest implements Runnable {
 

@@ -1,7 +1,8 @@
-package 펍섭패턴;
+package PubSubPattern;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;
@@ -50,7 +51,7 @@ class FoodTable {
     private ReentrantLock lock = new ReentrantLock();
     private Condition forDrink = lock.newCondition();
     private Condition forBurger = lock.newCondition();
-    private Condition condition = lock.newCondition();
+//    private Condition condition = lock.newCondition();
 
     private AtomicInteger makeFood = new AtomicInteger();
 
@@ -58,7 +59,7 @@ class FoodTable {
     public void add(String food) {
         lock.lock();
         try {
-            if (food == "콜라" || food == "환타" || food == "물") {
+            if (food.equals("콜라")|| food.equals("환타")|| food.equals("물")) {
                 drinks.add(food);
                 //총 만든 요리 갯수 atomic으로 계산.
                 makeFood.getAndIncrement();
@@ -93,7 +94,7 @@ class FoodTable {
         String setTopic = topic;
         lock.lock();
         String name = Thread.currentThread().getName();
-        if (setTopic == "drink") {
+        if (setTopic.equals("drink")) {
             try {
                 while (drinks.isEmpty()) {
                     System.out.println("-------"+name + "is waiting");
@@ -180,7 +181,8 @@ class Cook implements Runnable {
     @Override
     public void run() {
         while (true) {
-            int idx = (int) (Math.random() * 6);
+            Random random = new Random();
+            int idx = random.nextInt(6);
             foodTable.add(foodTable.allNames[idx]);
         }
     }

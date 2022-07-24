@@ -1,4 +1,4 @@
-package 재진입락;
+package ReentrantLock;
 
 import java.util.ArrayList;
 import java.util.concurrent.locks.Condition;

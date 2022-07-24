@@ -1,4 +1,4 @@
-package lock객체조사;
+package lockObjechInvestigation;
 
 import java.util.Random;
 import java.util.concurrent.locks.Lock;
