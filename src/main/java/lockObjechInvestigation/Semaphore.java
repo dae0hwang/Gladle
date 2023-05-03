@@ -1,8 +1,6 @@
 package lockObjechInvestigation;
 
-import java.util.concurrent.Semaphore;
-
-public class Semaphore1 {
+public class Semaphore {
     public static void main(String[] args) {
         SomeResource resource = new SomeResource(3);
 
@@ -21,12 +19,12 @@ public class Semaphore1 {
 
 class SomeResource {
 
-    private final Semaphore semaphore;
+    private final java.util.concurrent.Semaphore semaphore;
     private final int maxThread;
 
     SomeResource(int maxThread) {
         this.maxThread = maxThread;
-        this.semaphore = new Semaphore(maxThread);
+        this.semaphore = new java.util.concurrent.Semaphore(maxThread);
     }
 
     public void use() {
@@ -36,7 +34,8 @@ class SomeResource {
                 + semaphore.toString() + " 사용중");
             Thread.sleep((long) (Math.random() * 10000));
             System.out.println("[" + Thread.currentThread().getName() + "] 종료");
-            semaphore.release(); // Thread 가 semaphore에게 종료를 알림
+            // Thread 가 semaphore에게 종료를 알림
+            semaphore.release();
         } catch (InterruptedException e) {
 
         }

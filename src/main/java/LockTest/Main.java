@@ -20,5 +20,4 @@ public class Main {
         System.out.println("아토믹 사용 o");
         System.out.println(runnable.num2);
     }
-
 }

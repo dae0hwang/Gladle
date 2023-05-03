@@ -1,11 +1,8 @@
-package ThreadPractice;
+package CouncurrentTest;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-public class ConcurrentLIst {
+public class CopyOnWriteListTest {
     public static void main(String[] args) throws InterruptedException {
         TestList testList = new TestList();
         Thread t1 = new Thread(testList);
@@ -22,30 +19,26 @@ public class ConcurrentLIst {
         t2.join();
         t3.join();
         t4.join();
-
-
     }
+
+
 }
 
-class TestList implements Runnable {
-//    ArrayList<Integer> list1 = new ArrayList();
-    CopyOnWriteArrayList<Integer> list1 = new CopyOnWriteArrayList<>();
-    List<Object> list = Collections.synchronizedList(new ArrayList<>());
-
+class TestList implements java.lang.Runnable {
+    private CopyOnWriteArrayList<Integer> list = new CopyOnWriteArrayList<>();
     @Override
     public void run() {
         for (int i = 0; i < 500; i++) {
             int addNum = (int) (Math.random() * 10);
-            list1.add(addNum);
+            list.add(addNum);
             System.out.println("+" + addNum);
-            System.out.println(list1);
+            System.out.println(list);
 
-            int removeNum = list1.remove(0);
+            int removeNum = list.remove(0);
             System.out.println("-" + removeNum);
-            System.out.println(list1);
-
+            System.out.println(list);
 
         }
+
     }
 }
-

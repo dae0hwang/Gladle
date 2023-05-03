@@ -1,4 +1,4 @@
-package TestTest;
+package MockTest;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.mock;

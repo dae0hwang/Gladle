@@ -3,7 +3,6 @@ package lockObjechInvestigation;
 public class ThreadLocalTest implements Runnable {
 
     private static final ThreadLocal<String> info = new ThreadLocal<>() {
-
         protected String initialValue() {
             return new String("Default");
         }
@@ -24,8 +23,5 @@ public class ThreadLocalTest implements Runnable {
             thread.start();
 
         }
-
     }
-
-
 }

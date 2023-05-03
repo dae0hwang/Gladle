@@ -6,11 +6,9 @@ import java.util.List;
 public class TreadWaitEx1 {
     public static void main(String[] args) throws InterruptedException {
         Table3 table = new Table3();
-
         new Thread(new Cook3(table), "Cook1").start();
         new Thread(new Customer3(table, "donut"), "CUST1").start();
         new Thread(new Customer3(table, "burger"), "CUST2").start();
-
     }
 }
 
@@ -32,7 +30,6 @@ class Customer3 implements Runnable {
             table.remove(food);
             System.out.println(name + "ate a " + food);
         }
-
     }
 }
 

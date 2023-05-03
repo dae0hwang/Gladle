@@ -1,10 +1,9 @@
-package CouncurrentListEx1;
+package CouncurrentTest;
 
 import java.util.concurrent.ConcurrentHashMap;
 
 public class ConcurrentHashMapTest {
     public static void main(String[] args) {
-
     }
 }
 
@@ -14,7 +13,5 @@ class Test implements Runnable {
     public void run() {
         int random = (int) ((Math.random()) * 10);
         hashMap.put(random, random);
-
-
     }
 }

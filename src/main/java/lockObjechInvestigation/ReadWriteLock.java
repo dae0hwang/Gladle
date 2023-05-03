@@ -2,10 +2,9 @@ package lockObjechInvestigation;
 
 import java.util.Random;
 import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
-public class ReadWriteLock2 {
+public class ReadWriteLock {
     public static void main(String[] args) throws InterruptedException {
         Data data = new Data(10);
         new ReaderThread(data).start();
@@ -21,7 +20,7 @@ public class ReadWriteLock2 {
 
 class Data {
     private final char[] buffer;
-    private final ReadWriteLock lock = new ReentrantReadWriteLock(false);
+    private final java.util.concurrent.locks.ReadWriteLock lock = new ReentrantReadWriteLock(false);
     private final Lock readLock = lock.readLock();
     private final Lock writeLock = lock.writeLock();
 

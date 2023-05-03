@@ -2,12 +2,6 @@ package HashFactory;
 
 import java.util.Iterator;
 import java.util.LinkedList;
-import lombok.AllArgsConstructor;
-import lombok.Lombok;
-
-
-
-
 
 public class Hash {
 
@@ -46,7 +40,6 @@ public class Hash {
         if (table[index] == null) {
             return null;
         }
-
 
         Iterator<Node> iterator = table[index].iterator();
 
@@ -87,9 +80,5 @@ public class Hash {
         }else {
             return searched.value;
         }
-
     }
-
-
-
 }

@@ -1,4 +1,4 @@
-package TestTest;
+package MockTest;
 
 public class Main {
 

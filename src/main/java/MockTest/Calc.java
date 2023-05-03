@@ -1,6 +1,4 @@
-package TestTest;
-
-import java.util.Scanner;
+package MockTest;
 
 public class Calc {
 

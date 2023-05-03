@@ -1,4 +1,4 @@
-package TestTest;
+package MockTest;
 
 import java.util.Scanner;
 import lombok.Getter;

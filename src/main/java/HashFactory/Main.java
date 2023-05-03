@@ -10,10 +10,7 @@ public class Main {
         while (true) {
             a++;
         }
-
-        }
-
-
+    }
 }
 
 

@@ -8,10 +8,8 @@ public class ThreadEx21 {
         t1.start();
         t1.join(1000);
         t2.start();
-
     }
 }
-
 
 class Account {
     private int balance = 1000;
@@ -27,8 +25,6 @@ class Account {
             balance -= money;
         }
     }
-
-
 }
 
 class RunableEx21 implements Runnable {
@@ -46,19 +42,3 @@ class RunableEx21 implements Runnable {
 
     }
 }
-
-
-//synchronized 적용하지 않은 버전
-//class RunableEx21 implements Runnable {
-//    Account acc = new Account();
-//
-//    @Override
-//    public void run() {
-//        while (acc.getBalance() > 0) {
-//            int money = (int) (Math.random() * 3 + 1) * 100;
-//            acc.withdraw(money);
-//            System.out.println("balance : " + acc.getBalance());
-//        }
-//
-//    }
-//}

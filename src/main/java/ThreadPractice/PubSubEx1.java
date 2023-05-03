@@ -10,15 +10,12 @@ public class PubSubEx1 {
     private List<Integer> list = new ArrayList<>();
 
     public static void main(String[] args) {
-        PubSubEx1 threadSignaling  = new PubSubEx1();
+        PubSubEx1 threadSignaling = new PubSubEx1();
         Thread publisher1 = new Thread(() -> threadSignaling.publisher());
         publisher1.start();
         Thread subscriber1 = new Thread(() -> threadSignaling.subscriber());
         subscriber1.start();
     }
-
-
-
 
     public void subscriber() {
         for (int i = 0; i < initialCapcity; i++) {
@@ -39,8 +36,6 @@ public class PubSubEx1 {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-
-
         }
     }
 
@@ -69,8 +64,6 @@ public class PubSubEx1 {
             }
         }
     }
-
-
 }
 
 

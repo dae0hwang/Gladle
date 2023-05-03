@@ -18,8 +18,6 @@ public class TreadWaitEx4 {
         Thread.sleep(1000);
         System.exit(0);
     }
-
-
 }
 
 class Customer4 implements Runnable{
