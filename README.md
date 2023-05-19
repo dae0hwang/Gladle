@@ -1,7 +1,7 @@
 # Java_Thread_Project
-자바의  Runnable Thread 동작 원리와 동시성 문제를 해결하는 솔루션 프로젝트
+자바의  Runnable Thread 동작 원리와 동시성 문제를 해결하는 솔루션 프로젝트입니다.
 
-동시성 문제를 해결하기 위한 Lock객체, ThreadLocal, AtomicType, ConcurrentList, ConcurrentHashMap에 대한 원리와 사용 방법을 알아본다.
+동시성 문제를 해결하기 위한 Lock객체, ThreadLocal, AtomicType, ConcurrentList, ConcurrentHashMap에 대한 원리와 사용 방법에 대해서 설명합니다.
 # 관련 블로그 포스트
 [Thread 와 Process Fork 차이](https://coding-business.tistory.com/20)
 
