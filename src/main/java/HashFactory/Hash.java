@@ -5,17 +5,6 @@ import java.util.LinkedList;
 
 public class Hash {
 
-    class Node {
-
-        String key;
-        String value;
-
-        Node(String key, String value) {
-            this.key = key;
-            this.value = value;
-        }
-    }
-
     private LinkedList<Node>[] table;
 
     public Hash(int size) {
@@ -25,7 +14,7 @@ public class Hash {
     private int getHashCode(String key) {
         int hashCode = 0;
         for (char c : key.toCharArray()) {
-            hashCode += (int) c;
+            hashCode += c;
         }
         return hashCode;
     }
@@ -34,15 +23,11 @@ public class Hash {
         return hashCode % table.length;
     }
 
-
-    //이터레이터로 원하는 노드 찾기.
     private Node searchNode(int index, String key) {
         if (table[index] == null) {
             return null;
         }
-
         Iterator<Node> iterator = table[index].iterator();
-
         while (iterator.hasNext()) {
             Node node = iterator.next();
             if (node.key == key) {
@@ -57,18 +42,17 @@ public class Hash {
         int index = getIndex(hashCode);
 
         if (table[index] == null) {
-            table[index] = new LinkedList<Node>();
-            table[index].add(new Node(key, value));
+            table[index] = new LinkedList<>();
+            table[index].add(Node.builder().key(key).value(value).build());
         } else {
             Node searched = searchNode(index, key);
             if (searched != null) {
                 searched.value = value;
             }else {
-                table[index].add(new Node(key, value));
+                table[index].add(Node.builder().key(key).value(value).build());
             }
         }
     }
-
 
     public String get(String key) {
         int hashCode = getHashCode(key);

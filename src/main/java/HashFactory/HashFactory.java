@@ -1,6 +1,6 @@
 package HashFactory;
 
-public class Factory {
+public class HashFactory {
 
     public Hash createHash(int size) {
         return new Hash(size);
